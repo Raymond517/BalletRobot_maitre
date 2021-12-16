@@ -2,7 +2,7 @@ input.onButtonPressed(Button.A, function () {
     radio.sendNumber(0)
     EnAvant(2000, 255)
     radio.sendNumber(1)
-    TourneDroite(80)
+    TourneDroite(90)
     EnAvant(2000, 255)
     radio.sendNumber(2)
     EnArriere(2000, 255)
@@ -16,14 +16,14 @@ function TourneGauche (Degres: number) {
     maqueen.motorStop(maqueen.Motors.All)
     basic.showArrow(ArrowNames.East)
     maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 64)
-    basic.pause(780 * (Degres / 90))
+    basic.pause(760 * (Degres / 90))
     maqueen.motorStop(maqueen.Motors.M2)
 }
 function TourneDroite (Degres: number) {
     maqueen.motorStop(maqueen.Motors.All)
     basic.showArrow(ArrowNames.West)
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 64)
-    basic.pause(780 * (Degres / 90))
+    basic.pause(760 * (Degres / 90))
     maqueen.motorStop(maqueen.Motors.M1)
 }
 function EnArriere (Duree: number, Vitesse: number) {
